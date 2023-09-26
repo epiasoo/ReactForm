@@ -1,0 +1,51 @@
+/* formInput.css */
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  width: 170px; /* Set a fixed width for all labels */
+  font-size: 14px;
+  color: rgb(93, 91, 91);
+  text-align: left; /* Align label text to the right */
+  margin-right: 8px; /* Add spacing between label and input */
+  font-weight: bold;
+}
+
+.input {
+  flex-grow: 1; /* Allow input to grow and take up available space */
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin: 10px 0px; /* Move this line to keep consistent margin */
+  width: 230px;
+}
+
+span {
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: none;
+}
+
+/* Adjust the border color for invalid inputs */
+.input:invalid[focused="true"] {
+  border-color: red;
+}
+
+/* Display the error message for invalid inputs */
+.input:invalid[focused="true"] ~ span {
+  display: block;
+}
+
+.inputWrapper {
+  max-height: 80px; /* Adjust this value as needed */
+}
+
+.required-sign {
+  display: inline;
+  color: red; /* You can also set the color and other styles as needed */
+}
